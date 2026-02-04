@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal 86 | Escape Room de Terror 80s</title>
+  <meta name="description" content="Escape room de terror con estética 80s sobrenatural. Reserva con calendario real." />
+  <meta property="og:title" content="Portal 86 | Escape Room" />
+  <meta property="og:description" content="Terror sobrenatural ochentero. Reserva online con calendario real." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="lightning" id="lightning" aria-hidden="true"></div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio">
+        <span class="brand__logo">⟠</span>
+        <span class="brand__text">
+          <span class="brand__name">PORTAL 86</span>
+          <span class="brand__tag">Terror sobrenatural · Estética 80s</span>
+        </span>
+      </a>
+
+      <button class="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--small btn--hot" href="#reservas">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__bg"></div>
+      <div class="hero__shade"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge">
+          <span class="pulseDot"></span>
+          <span>Modo Terror · 90 min · 2–6 jugadores</span>
+        </div>
+
+        <h1 class="hero__title reveal">ABRE EL PORTAL</h1>
+        <p class="hero__subtitle reveal delay1">
+          Algo se coló desde “el otro lado”. Las luces parpadean, la radio susurra,
+          y la realidad se agrieta. Tenéis 90 minutos para cerrarlo.
+        </p>
+
+        <div class="hero__cta reveal delay2">
+          <a class="btn btn--hot" href="#reservas">Ver calendario</a>
+          <button class="btn btn--ghost" type="button" id="portalBtn">Activar portal</button>
+        </div>
+
+        <div class="stats reveal delay3">
+          <div class="stat"><strong>90</strong><span>min</span></div>
+          <div class="stat"><strong>2–6</strong><span>jugadores</span></div>
+          <div class="stat"><strong>Media</strong><span>dificultad</span></div>
+          <div class="stat"><strong>+16</strong><span>recomendado</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Historia</h2>
+          <p class="muted">
+            No puedo incluir imágenes oficiales ni usar la marca “Stranger Things” sin licencia.
+            Este diseño es original con vibra “sobrenatural ochentera”.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3>La anomalía</h3>
+            <p>En 1986, un experimento falló. Desde entonces, el lugar “respira” electricidad y sombras.</p>
+            <ul>
+              <li>Luces y radios que se encienden solas</li>
+              <li>Habitaciones que cambian</li>
+              <li>Una presencia que aprende</li>
+            </ul>
+          </div>
+          <div class="card reveal delay1">
+            <h3>Vuestra misión</h3>
+            <p>Reunid las piezas del dispositivo y cerrad el portal antes de que el lugar os atrape.</p>
+            <div class="callout">Consejo: no os separéis…</div>
+          </div>
+        </div>
+
+        <div class="gallery reveal delay2">
+          <img src="assets/monster1.jpg" alt="Criatura del umbral, arte original" loading="lazy">
+          <img src="assets/monster2.jpg" alt="Entidad de pétalos, arte original" loading="lazy">
+          <img src="assets/monster3.jpg" alt="Sombra del portal, arte original" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="experiencia">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Experiencia</h2>
+          <p class="muted">Efectos, sonido, puzles y sustos. Sin contacto físico. Botones interactivos:</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card reveal">
+            <h3>Luces</h3>
+            <p>Prueba un modo “alarma”.</p>
+            <button class="chip" data-scare="lights">Probar luces</button>
+          </div>
+          <div class="card reveal delay1">
+            <h3>Glitch</h3>
+            <p>Interferencia visual tipo VHS.</p>
+            <button class="chip" data-scare="glitch">Probar glitch</button>
+          </div>
+          <div class="card reveal delay2">
+            <h3>Susurro</h3>
+            <p>Un mensaje breve…</p>
+            <button class="chip" data-scare="whisper">Probar susurro</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reservas">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Reservas</h2>
+          <p class="muted">Calendario real: verde = libre, rojo = ocupado. Al reservar, se bloquea en la base de datos.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3>Calendario</h3>
+
+            <div class="calendar">
+              <div class="calTop">
+                <button class="iconBtn" data-cal-prev>‹</button>
+                <div class="calMonth" data-cal-month>Mes</div>
+                <button class="iconBtn" data-cal-next>›</button>
+              </div>
+
+              <div class="calDow">
+                <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+              </div>
+
+              <div class="calGrid" data-cal-grid></div>
+
+              <div class="calBottom">
+                <div>
+                  <div class="label">Fecha</div>
+                  <div class="value" data-cal-selected>—</div>
+                </div>
+
+                <div>
+                  <div class="label">Horarios</div>
+                  <div class="times" data-cal-times>
+                    <span class="muted">Selecciona una fecha…</span>
+                  </div>
+                </div>
+
+                <div class="label">Datos</div>
+                <div class="formGrid">
+                  <input id="bkName" placeholder="Nombre" autocomplete="name">
+                  <input id="bkPhone" placeholder="Teléfono" autocomplete="tel">
+                  <input id="bkEmail" placeholder="Email" type="email" autocomplete="email" class="span2">
+                  <select id="bkPlayers">
+                    <option value="2">2 jugadores</option><option value="3">3 jugadores</option><option value="4">4 jugadores</option>
+                    <option value="5">5 jugadores</option><option value="6">6 jugadores</option>
+                  </select>
+                  <select id="bkMode">
+                    <option value="Terror">Modo Terror</option>
+                    <option value="Tensión">Modo Tensión</option>
+                  </select>
+                  <input id="bkNotes" placeholder="Notas (opcional)" class="span2">
+                </div>
+
+                <button class="btn btn--hot" data-cal-book disabled>Confirmar reserva</button>
+                <div class="legend">
+                  <span><i class="dot green"></i>Libre</span>
+                  <span><i class="dot red"></i>Ocupado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal delay1">
+            <h3>Precios</h3>
+            <div class="price"><span>2 jugadores</span><strong>60€</strong></div>
+            <div class="price"><span>3–4 jugadores</span><strong>80€</strong></div>
+            <div class="price"><span>5–6 jugadores</span><strong>100€</strong></div>
+            <div class="callout">Incluye servidor + SQLite para reservas reales.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+      <div class="container footGrid">
+        <div>
+          <h3>Contacto</h3>
+          <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad</p>
+          <p><strong>Tel:</strong> <a href="tel:+34123456789">+34 123 456 789</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@portal86.com">info@portal86.com</a></p>
+        </div>
+        <div>
+          <h3>Redes</h3>
+          <p><a href="https://www.instagram.com/tuinstagram" target="_blank" rel="noopener">Instagram</a></p>
+          <p><a href="https://wa.me/34123456789" target="_blank" rel="noopener">WhatsApp</a></p>
+          <p><a href="https://www.tiktok.com/@tutiktok" target="_blank" rel="noopener">TikTok</a></p>
+        </div>
+        <div class="right">
+          <p>© <span id="year"></span> PORTAL 86</p>
+          <p class="small"><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></p>
+          <a class="toTop" href="#top">↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </main>
+</body>
+</html>
