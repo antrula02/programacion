@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoRent — Alquiler de coches</title>
+    <meta name="description" content="Alquiler de coches fácil y rápido. Reserva online en minutos." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <span class="brand-mark">AR</span>
+          <span class="brand-name">AutoRent</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#coches">Coches</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#opiniones">Opiniones</a>
+          <a href="#contacto" class="btn btn--small">Contactar</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Alquila tu coche en minutos</h1>
+            <p>
+              Precios claros, cancelación flexible y una flota para cada plan: ciudad, carretera o vacaciones.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn" href="#busqueda">Buscar coches</a>
+              <a class="btn btn--ghost" href="#como-funciona">Ver cómo funciona</a>
+            </div>
+
+            <ul class="hero-bullets">
+              <li>✅ Seguro básico incluido</li>
+              <li>✅ Recogida rápida</li>
+              <li>✅ Soporte 24/7</li>
+            </ul>
+          </div>
+
+          <!-- Search Card -->
+          <div class="card" id="busqueda" aria-label="Buscador de coches">
+            <h2 class="card-title">Encuentra tu coche</h2>
+
+            <form class="form" action="#" method="get">
+              <div class="form-row">
+                <label for="ciudad">Ciudad</label>
+                <input id="ciudad" name="ciudad" type="text" placeholder="Madrid, Barcelona..." />
+              </div>
+
+              <div class="form-row grid-2">
+                <div>
+                  <label for="recogida">Recogida</label>
+                  <input id="recogida" name="recogida" type="date" />
+                </div>
+                <div>
+                  <label for="devolucion">Devolución</label>
+                  <input id="devolucion" name="devolucion" type="date" />
+                </div>
+              </div>
+
+              <div class="form-row grid-2">
+                <div>
+                  <label for="tipo">Tipo</label>
+                  <select id="tipo" name="tipo">
+                    <option value="cualquiera">Cualquiera</option>
+                    <option value="economico">Económico</option>
+                    <option value="compacto">Compacto</option>
+                    <option value="suv">SUV</option>
+                    <option value="premium">Premium</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="cambios">Cambios</label>
+                  <select id="cambios" name="cambios">
+                    <option>Indiferente</option>
+                    <option>Manual</option>
+                    <option>Automático</option>
+                  </select>
+                </div>
+              </div>
+
+              <button class="btn btn--full" type="submit">Buscar disponibilidad</button>
+              <p class="hint">* Demo: este formulario no envía datos.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cars -->
+      <section class="section" id="coches">
+        <div class="container">
+          <div class="section-head">
+            <h2>Coches destacados</h2>
+            <p>Elige el que mejor encaje con tu viaje.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="car">
+              <div class="car-badge">Más vendido</div>
+              <div class="car-media" role="img" aria-label="Coche compacto"></div>
+              <div class="car-body">
+                <h3>Compacto City</h3>
+                <p class="muted">5 plazas · Manual · A/C</p>
+                <div class="car-meta">
+                  <span class="price">29€<small>/día</small></span>
+                  <a class="btn btn--small" href="#contacto">Reservar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="car">
+              <div class="car-media car-media--2" role="img" aria-label="SUV familiar"></div>
+              <div class="car-body">
+                <h3>SUV Family</h3>
+                <p class="muted">5–7 plazas · Automático · GPS</p>
+                <div class="car-meta">
+                  <span class="price">49€<small>/día</small></span>
+                  <a class="btn btn--small" href="#contacto">Reservar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="car">
+              <div class="car-media car-media--3" role="img" aria-label="Coche premium"></div>
+              <div class="car-body">
+                <h3>Premium Drive</h3>
+                <p class="muted">5 plazas · Automático · Full</p>
+                <div class="car-meta">
+                  <span class="price">79€<small>/día</small></span>
+                  <a class="btn btn--small" href="#contacto">Reservar</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section section--soft" id="como-funciona">
+        <div class="container">
+          <div class="section-head">
+            <h2>Cómo funciona</h2>
+            <p>3 pasos y listo.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <h3>Busca</h3>
+              <p class="muted">Elige ciudad, fechas y tipo de coche.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <h3>Reserva</h3>
+              <p class="muted">Confirma en segundos con pago seguro.</p>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <h3>Conduce</h3>
+              <p class="muted">Recoge el coche y disfruta del viaje.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section" id="opiniones">
+        <div class="container">
+          <div class="section-head">
+            <h2>Opiniones</h2>
+            <p>Lo que dicen nuestros clientes.</p>
+          </div>
+
+          <div class="grid cards">
+            <figure class="quote">
+              <blockquote>“Reservé en 2 minutos y la recogida fue rapidísima.”</blockquote>
+              <figcaption class="muted">— Laura, Madrid</figcaption>
+            </figure>
+
+            <figure class="quote">
+              <blockquote>“Precio claro, coche impecable. Repetiré seguro.”</blockquote>
+              <figcaption class="muted">— Diego, Valencia</figcaption>
+            </figure>
+
+            <figure class="quote">
+              <blockquote>“La atención 24/7 nos salvó con una duda en carretera.”</blockquote>
+              <figcaption class="muted">— Sara, Sevilla</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--soft" id="contacto">
+        <div class="container contact">
+          <div>
+            <h2>¿Listo para reservar?</h2>
+            <p class="muted">
+              Escríbenos y te ayudamos a elegir el mejor coche para tu ruta.
+            </p>
+
+            <div class="contact-cards">
+              <div class="mini">
+                <strong>📞 Teléfono</strong>
+                <span class="muted">+34 600 000 000</span>
+              </div>
+              <div class="mini">
+                <strong>✉️ Email</strong>
+                <span class="muted">hola@autorent.com</span>
+              </div>
+              <div class="mini">
+                <strong>🕒 Horario</strong>
+                <span class="muted">L–D, 9:00–21:00</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="card form" action="#" method="post">
+            <h3 class="card-title">Envíanos un mensaje</h3>
+
+            <div class="form-row">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tu@email.com" />
+            </div>
+
+            <div class="form-row">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+            </div>
+
+            <button class="btn btn--full" type="submit">Enviar</button>
+            <p class="hint">* Demo: este formulario no envía datos.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> AutoRent. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Ayuda</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
